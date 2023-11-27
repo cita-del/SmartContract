@@ -1,55 +1,47 @@
-# Token Management System
+# Smart Contract
 
-The program is designed to facilitate token management on the Ethereum blockchain. It enables users to create (mint) and destroy (burn) tokens based on specific conditions. The main purpose is to provide a foundational understanding of token operations and to serve as a basic template for more complex token management systems.
+The Assessment.sol is a Solidity smart contract designed for basic fund management on the Ethereum blockchain. It features functionalities such as depositing and withdrawing funds, ownership control, and event logging. The contract is created to provide a simple and secure way to manage balances and transactions.
 
 ## Description
 
-This project comprises a basic Ethereum token contract named `Token` that enables the creation and destruction of tokens. The contract allows users to mint tokens to a specified address and burn tokens based on certain conditions. It is a simplistic representation of a token management system built in Solidity.
+## Assessment.sol
 
+`Assessment.sol` is a Solidity smart contract tailored for basic financial transactions on the Ethereum blockchain. It ensures secure ownership control, allowing only the designated owner to manage funds. Users can deposit and withdraw funds, with events logged for transparency. The contract provides a simple balance query functionality, and a custom error prevents withdrawals that exceed the available balance.
+
+## index.js
+
+`index.js` complements `Assessment.sol` by offering a user interface through a React-based decentralized application (DApp). Integrated with MetaMask, the DApp enables users to connect their wallets, view account details, and perform transactions. Real-time balance updates and a responsive design enhance user experience, making this DApp an accessible solution for basic financial interactions on Ethereum. Ideal for educational purposes and as a foundation for more advanced decentralized applications.
 
 ## Getting Started
 
-### Installing
-
-* Clone this repository to your local machine.
-
 ### Executing program
 
-1.) Deployment:
+To run this program, you can use gitpod, an online Solidity IDE. To get started, go to this website https://gitpod.io/new/#https://github.com/MetacrafterChris/SCM-Starter it is already in template you just need to copy the two file and replace it which is the Assessment.sol and index.js you can find Asessment.sol in contract folder while index.js is in pages.
 
-Deploy the contract on the Ethereum blockchain using tools such as Remix or Truffle.
+1. Inside the project directory, in the terminal type: npm i
+2. Open two additional terminals in your VS code
+3. In the second terminal type: npx hardhat node
+4. In the third terminal, type: npx hardhat run --network localhost scripts/deploy.js
+5. Back in the first terminal, type npm run dev to launch the front-end.
 
-2.) Interaction:
-Interact with the deployed contract by calling its functions using an Ethereum wallet or development environment.
+After this, the project will be running on your localhost. 
+Typically at http://localhost:3000/
 
-3.) Mint Tokens:
-Use the mint function to create new tokens. Provide the address where the tokens will be minted and the value to be added.
+Now you can acccess the web we should start setting up our metamask wallet go to settings of your metamask wallet click Networks->Add network-> and Manually Add Network, now input this on each field:
 
-4.) Burn Tokens:
-Utilize the burn function to destroy tokens. Specify the address from which tokens will be burned and the amount to be subtracted.
-
-	Ensure that you have the necessary gas fees and proper network configurations set up to successfully execute the program.
-
-```
-
-Code blocks for commands:
-
-// Mint tokens to an address
-Token.mint(address, value);
-
-// Burn tokens from an address
-Token.burn(address, value);
+Network name:
+Localhost gitpod
+New RPC URL:
+https://8545-metacrafterc-scmstarter-rex3mysx58o.ws-us106.gitpod.io
+Chain ID:
+31337
+Currency symbol:
+ETH
+Block explorer URL (Optional) (Leave this blank)
 
 ## Help
 
-If you encounter any issues during deployment or execution, ensure that you have the appropriate gas fees and proper network settings configured. Additionally, make sure your Ethereum wallet or development environment is compatible with the Solidity version used in this contract.
-
-Advice for common problems or issues:
-- Double-check the address and value parameters while minting or burning tokens.
-- Ensure that the address has a sufficient balance before burning tokens.
-
-Command to run if the program contains helper info:
-Token.help()
+If you encounter any issues or have questions, feel free to open an issue on the GitHub repository.
 
 ## Authors
 
@@ -61,4 +53,4 @@ Charles Christian O. Sapida
 
 ## License
 
-This project is licensed under the [Charles Christian Sapida] License - see the LICENSE.md file for details
+This project is licensed under the [Charles Christian O. Sapida] License - see the LICENSE.md file for details
