@@ -1,42 +1,56 @@
-# Hello World
+# Smart Contract
 
-This Solidity program is a simple "Hello World" program that demonstrates the basic syntax and functionality of the Solidity programming language. The purpose of this program is to serve as a starting point for those who are new to Solidity and want to get a feel for how it works.
+The Assessment.sol is a Solidity smart contract designed for basic fund management on the Ethereum blockchain. It features functionalities such as depositing and withdrawing funds, ownership control, and event logging. The contract is created to provide a simple and secure way to manage balances and transactions.
 
 ## Description
 
-This program is a simple contract written in Solidity, a programming language used for developing smart contracts on the Ethereum blockchain. The contract has a single function that returns the string "Hello World!". This program serves as a simple and straightforward introduction to Solidity programming, and can be used as a stepping stone for more complex projects in the future.
+## Assessment.sol
+
+`Assessment.sol` is a Solidity smart contract tailored for basic financial transactions on the Ethereum blockchain. It ensures secure ownership control, allowing only the designated owner to manage funds. Users can deposit and withdraw funds, with events logged for transparency. The contract provides a simple balance query functionality, and a custom error prevents withdrawals that exceed the available balance.
+
+## index.js
+
+`index.js` complements `Assessment.sol` by offering a user interface through a React-based decentralized application (DApp). Integrated with MetaMask, the DApp enables users to connect their wallets, view account details, and perform transactions. Real-time balance updates and a responsive design enhance user experience, making this DApp an accessible solution for basic financial interactions on Ethereum. Ideal for educational purposes and as a foundation for more advanced decentralized applications.
 
 ## Getting Started
 
 ### Executing program
 
-To run this program, you can use Remix, an online Solidity IDE. To get started, go to the Remix website at https://remix.ethereum.org/.
+To run this program, you can use gitpod, an online Solidity IDE. To get started, go to this website https://gitpod.io/new/#https://github.com/MetacrafterChris/SCM-Starter it is already in template you just need to copy the two file and replace it which is the Assessment.sol and index.js you can find Asessment.sol in contract folder while index.js is in pages.
 
-Once you are on the Remix website, create a new file by clicking on the "+" icon in the left-hand sidebar. Save the file with a .sol extension (e.g., HelloWorld.sol). Copy and paste the following code into the file:
+1. Inside the project directory, in the terminal type: npm i
+2. Open two additional terminals in your VS code
+3. In the second terminal type: npx hardhat node
+4. In the third terminal, type: npx hardhat run --network localhost scripts/deploy.js
+5. Back in the first terminal, type npm run dev to launch the front-end.
 
-```javascript
-pragma solidity ^0.8.4;
+After this, the project will be running on your localhost. 
+Typically at http://localhost:3000/
 
-contract HelloWorld {
-    function sayHello() public pure returns (string memory) {
-        return "Hello World!";
-    }
-}
+Now you can acccess the web we should start setting up our metamask wallet go to settings of your metamask wallet click Networks->Add network-> and Manually Add Network, now input this on each field:
 
-```
+Network name:
+Localhost gitpod
+New RPC URL:
+https://8545-metacrafterc-scmstarter-rex3mysx58o.ws-us106.gitpod.io
+Chain ID:
+31337
+Currency symbol:
+ETH
+Block explorer URL (Optional) (Leave this blank)
 
-To compile the code, click on the "Solidity Compiler" tab in the left-hand sidebar. Make sure the "Compiler" option is set to "0.8.4" (or another compatible version), and then click on the "Compile HelloWorld.sol" button.
+## Help
 
-Once the code is compiled, you can deploy the contract by clicking on the "Deploy & Run Transactions" tab in the left-hand sidebar. Select the "HelloWorld" contract from the dropdown menu, and then click on the "Deploy" button.
-
-Once the contract is deployed, you can interact with it by calling the sayHello function. Click on the "HelloWorld" contract in the left-hand sidebar, and then click on the "sayHello" function. Finally, click on the "transact" button to execute the function and retrieve the "Hello World!" message.
+If you encounter any issues or have questions, feel free to open an issue on the GitHub repository.
 
 ## Authors
 
-Metacrafter Chris  
-[@metacraftersio](https://twitter.com/metacraftersio)
+Contributors names and contact info
+
+Charles Christian O. Sapida  
+[csapida1](https://www.facebook.com/csapida1)
 
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE.md file for details
+This project is licensed under the [Charles Christian O. Sapida] License - see the LICENSE.md file for details
